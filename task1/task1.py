@@ -2,11 +2,11 @@ import re
 
 
 def get_calibration_value(line):
-    # Find all sequences of digits in the line
-    digits = re.findall(r'\d', line)
-    if digits:
+    # Find all sequences of numbers in the line
+    numbers = re.findall(r'\d', line)
+    if numbers:
         # Combine the first and last digit to form a two-digit number
-        return int(digits[0] + digits[-1])
+        return int(numbers[0] + numbers[-1])
     return 0
 
 
@@ -18,6 +18,5 @@ def sum_calibration_values(filename):
     return total
 
 
-# Usage
-result = sum_calibration_values('puzzle-input.txt')
+result = sum_calibration_values('../puzzle-input.txt')
 print(result)

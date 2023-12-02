@@ -74,25 +74,6 @@ def filter_games_by_possible_high_scores(parsed_scores, possible):
     return filtered_games
 
 
-def find_lowest_scores_per_game(games):
-    lowest_scores_per_game = []
-
-    for game in games:
-        # initialize a new dictionary for the current game with the first games scores
-        if not lowest_scores_per_game:
-            lowest_scores_per_game.append({'blue': game['blue'], 'green': game['green'], 'red': game['red']})
-            continue
-
-        # compare and update the lowest score for each player
-        new_game_scores = {}
-        for player in ['blue', 'green', 'red']:
-            new_game_scores[player] = min(game[player], lowest_scores_per_game[-1][player])
-
-        lowest_scores_per_game.append(new_game_scores)
-
-    return lowest_scores_per_game
-
-
 def get_solution_1(filtered_games):
     return sum(filtered_games)
 

@@ -46,7 +46,7 @@ def sum_calibration_values(filename):
     return total
 
 
-print(sum_calibration_values("../puzzle-input.txt"))
+print(sum_calibration_values("input.txt"))
 
 
 

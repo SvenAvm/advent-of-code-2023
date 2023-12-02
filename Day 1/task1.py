@@ -18,5 +18,5 @@ def sum_calibration_values(filename):
     return total
 
 
-result = sum_calibration_values('../puzzle-input.txt')
+result = sum_calibration_values('input.txt')
 print(result)

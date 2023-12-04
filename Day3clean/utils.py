@@ -29,7 +29,7 @@ def search_around_target_location(grid, target_location, target_regex):
 
 
 # Check left and riht for continious digits of a whole number
-def check_for_continious_digits(grid, position):
+def check_for_continuous_digits(grid, position):
     pass
 
 
@@ -41,7 +41,16 @@ def calculate_gear_ratio(whole_number_1, whole_number_2):
 
 # Returns True if the given location is a number.
 def check_if_number_left(grid, position):
-    pass
+    row, col = position
+    # Adjust for 0-indexing
+    row -= 1
+    col -= 1
+
+    # Check if the column is not the first one and the left cell contains a number
+    if col > 0 and grid[row][col - 1].isdigit():
+        return True
+    else:
+        return False
 
 
 # Returns True if the given location is a number.

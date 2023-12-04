@@ -24,12 +24,6 @@ def process_file(file_path):
 
 
 # Processing the files and calculating the sums
-sum_test = process_file(file_path_test)
-sum_test2 = process_file(file_path_test2)
 sum_task = process_file(file_path_task)
 
-print("Sum for test.txt:", sum_test)
-print("Sum for test2.txt:", sum_test2)
-print("Sum for input.txt:", sum_task)
-
-asterix_surrounded = utils.find_asterisks_surrounded_by_numbers()
+print("Sum for task1:", sum_task)
